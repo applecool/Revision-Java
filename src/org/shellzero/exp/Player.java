@@ -1,5 +1,7 @@
 package org.shellzero.exp;
 
+import java.util.ArrayList;
+
 public class Player {
 
 	//instance variables for the Player Class
@@ -8,6 +10,7 @@ public class Player {
 	private int score;
 	private int level;
 	private Weapon weapon;
+	private ArrayList <InventoryItem> inventoryitems;
 	
 	//default constructor
 	public Player(){
@@ -16,6 +19,7 @@ public class Player {
 		this.score = 0;
 		this.level = 1;
 		setDefaultWeapon();
+		inventoryitems = new ArrayList<InventoryItem>();
 		
 	}
 	
@@ -79,4 +83,24 @@ public class Player {
 		return weapon;
 	}
 
+	public ArrayList<InventoryItem> getInventoryitems() {
+		return inventoryitems;
 	}
+
+	/*public void setInventoryitems(ArrayList<InventoryItem> inventoryitems) {
+		this.inventoryitems = inventoryitems;
+	}
+*/
+	public void addInventoryItem(InventoryItem inventoryItem){
+		inventoryitems.add(inventoryItem);
+	}
+	
+	public boolean dropInventoryItem(InventoryItem inventoryItem){
+		if(this.inventoryitems.contains(inventoryItem)){
+			inventoryitems.remove(inventoryItem);
+			return true;
+		}
+		
+		return false;
+	}
+}
