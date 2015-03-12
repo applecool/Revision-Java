@@ -27,6 +27,9 @@ public class Demo {
 		player1.addInventoryItem(new InventoryItem(ItemType.RING, "Magic ring"));
 		player1.addInventoryItem(new InventoryItem(ItemType.POTION, "Rage Potion"));
 		
+		boolean wasDeleted = player1.dropInventoryItem(potion);
+		System.out.println(wasDeleted);
+		
 		ArrayList<InventoryItem> allItems = player1.getInventoryitems();
 		int count = 0;
 		for(InventoryItem item: allItems){
