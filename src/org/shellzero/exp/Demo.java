@@ -38,6 +38,16 @@ public class Demo {
 		}
 		System.out.println("No of items in the inventory are : "+count);
 		
+		Enemy enemy = new Enemy(10, 5);
+		System.out.println("Hitpoints: " +enemy.getHitPonts() + " Lives: " +enemy.getLives());
+		
+		enemy.takeDamage(4);
+		
+		Soldier soldier = new Soldier(30, 3);
+		System.out.println("Hitpoints: " +soldier.getHitPonts() + " Lives: " +soldier.getLives());
+		
+		soldier.takeDamage(12);
+		
 	}
 
 }
