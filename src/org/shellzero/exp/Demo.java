@@ -48,6 +48,10 @@ public class Demo {
 		
 		soldier.takeDamage(12);
 		
+		SuperSoldier supersoldier = new SuperSoldier(100, 10);
+		System.out.println("Hitpoints: " +supersoldier.getHitPonts() + " Lives: " +supersoldier.getLives());
+		
+		supersoldier.takeDamage(8);
 	}
 
 }
