@@ -21,6 +21,11 @@ public class Demo {
 		
 		InventoryItem potion = new InventoryItem(ItemType.POTION, "Healing Potion");
 		player1.addInventoryItem(potion);
+		player1.addInventoryItem(new InventoryItem(ItemType.ARMOUR, "Bullet Proof Armor"));
+		player1.addInventoryItem(new InventoryItem(ItemType.RING, "Fire ring"));
+		player1.addInventoryItem(new InventoryItem(ItemType.RING, "Water ring"));
+		player1.addInventoryItem(new InventoryItem(ItemType.RING, "Magic ring"));
+		player1.addInventoryItem(new InventoryItem(ItemType.POTION, "Rage Potion"));
 		
 		ArrayList<InventoryItem> allItems = player1.getInventoryitems();
 		int count = 0;
