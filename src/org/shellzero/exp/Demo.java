@@ -1,5 +1,7 @@
 package org.shellzero.exp;
 
+import java.util.ArrayList;
+
 public class Demo {
 
 	/**
@@ -16,6 +18,17 @@ public class Demo {
 		Weapon Axe = new Weapon("Greyskull Axe", 100, 120);
 		player1.setWeapon(Axe);
 		System.out.println(player1.getWeapon().getName());
+		
+		InventoryItem potion = new InventoryItem(ItemType.POTION, "Healing Potion");
+		player1.addInventoryItem(potion);
+		
+		ArrayList<InventoryItem> allItems = player1.getInventoryitems();
+		int count = 0;
+		for(InventoryItem item: allItems){
+			System.out.println(item.getName());
+			count++;
+		}
+		System.out.println("No of items in the inventory are : "+count);
 		
 	}
 
